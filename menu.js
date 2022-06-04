@@ -75,7 +75,7 @@ let pizza = {
 
 //CODE HERE
 
-let {price} = pizza;
+let { price } = pizza;
 // console.log(price);
 
 /*
@@ -87,7 +87,7 @@ let {price} = pizza;
 
 //CODE HERE
 
-let {category} = pizza;
+let { category } = pizza;
 // console.log(category);
 
 
@@ -105,10 +105,51 @@ let {category} = pizza;
 
 //CODE HERE
 
-
+let foodArr = [
+    sushi = {
+        name: "Sashimi",
+        price: 2.99,
+        category: "Entree",
+        popularity: 95,
+        rating: 99,
+        tags: ["Gluten-Free", "Special"]
+    },
+    sandwich = {
+        name: "Cuban",
+        price: 4.99,
+        category: "Entree",
+        popularity: 88,
+        rating: 89,
+        tags: ["Tasty", "Special"]
+    },
+    soup = {
+        name: "Chicken Noodle",
+        price: 3.99,
+        category: "Appetizer",
+        popularity: 70,
+        rating: 85,
+        tags: ["Warm", "Famous"]
+    },
+    Nachos = {
+        name: "Nachelos",
+        price: 1.99,
+        category: "Appetizer",
+        popularity: 60,
+        rating: 72,
+        tags: ["For Kids", "Fast"]
+    },
+    steak = {
+        name: "ribeye",
+        price: 15.99,
+        category: "Entree",
+        popularity: 70,
+        rating: 99,
+        tags: ["Warm", "Gourmet", "Famous"]
+    }
+]
 
 //////////////////PROBLEM 4////////////////////
-/* 
+/*
     Let's filter the food objects according
     to their tags.
 
@@ -126,24 +167,24 @@ let {category} = pizza;
 
 
 //////////////////PROBLEM 5////////////////////
-/* 
+/*
     Now let's write a function that's a little
     more flexible than just filtering for one
-    value. We want to be able to filter for 
-    food that has above a certain rating, 
+    value. We want to be able to filter for
+    food that has above a certain rating,
     below a certain price, or any other combo.
 
     Write a function called `filterByProperty`
-    that takes in three arguments: `property`, 
-    `number`, and `type. 
+    that takes in three arguments: `property`,
+    `number`, and `type.
 
     The property will be a string (rating,
     popularity, or price)
 
     The number will be the number that you want
-    to compare against 
+    to compare against
 
-    The type should be 'above' or 'below' to 
+    The type should be 'above' or 'below' to
     indicate whether you want to get foods with
     values that are above or below the given number
     for the given property
@@ -153,14 +194,14 @@ let {category} = pizza;
 
     Use the filter method to filter the foodArr
 
-        In the callback, check if the `type` is `above`, 
+        In the callback, check if the `type` is `above`,
         if it is, return objects whose value for the given
         property is greater than the `number` passed in
 
         If the type isn't `below`, return objects whose
-        value for the given property is less than the 
+        value for the given property is less than the
         `number` passed in
-    
+
     Return the filtered array from the entire function
 */
 
