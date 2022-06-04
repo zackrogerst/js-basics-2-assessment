@@ -32,7 +32,16 @@
 
 //CODE HERE
 
+let pizza = {
+    name: "Pepporoni",
+    price: 5,
+    category: "Entree",
+    popularity: 85,
+    rating: 90,
+    tags: ["For Kids", "Hot n Ready", "Delivery"]
+}
 
+// console.log(pizza);
 
 //////////////////PROBLEM 2////////////////////
 /* 
