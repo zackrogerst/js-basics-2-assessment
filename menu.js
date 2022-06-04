@@ -53,6 +53,7 @@ let pizza = {
 
 //CODE HERE
 
+// console.log(pizza.rating);
 
 /*
     Second, log the second tag in your pizza's
@@ -63,6 +64,7 @@ let pizza = {
 
 //CODE HERE
 
+// console.log(pizza.tags[1]);
 
 /*
     Third, destructure the price off of the
@@ -73,6 +75,8 @@ let pizza = {
 
 //CODE HERE
 
+let {price} = pizza;
+// console.log(price);
 
 /*
     Fourth, and last, destructure the category
@@ -82,6 +86,9 @@ let pizza = {
 */
 
 //CODE HERE
+
+let {category} = pizza;
+// console.log(category);
 
 
 //////////////////PROBLEM 3////////////////////
