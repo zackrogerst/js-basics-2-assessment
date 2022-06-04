@@ -23,8 +23,8 @@
 
 //CODE HERE
 
-
-
+const greetUser = username => `Welcome back, ${username}`;
+// console.log(greetUser("Andrew"));
 
 
 //////////////////PROBLEM 2////////////////////
