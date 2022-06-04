@@ -51,6 +51,17 @@ const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 
 //CODE HERE
 
+function canWeDeliver(zipCode) {
+    for (let i = 0; i < deliveryAreaZipCodes.length; i++) {
+        if(deliveryAreaZipCodes[i] === zipCode) {
+            return "You are eligible for delivery";
+        } else {
+            return "You are not eligible for delivery";
+        }
+    }
+}
+
+// console.log(canWeDeliver(84606));
 
 
 /* 
@@ -71,6 +82,10 @@ const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 */
 
 // CODE HERE
+
+const canWeDeliverTwo = (zipCode) => deliveryAreaZipCodes.includes(zipCode) === true ? "You are eligible for delivery" : "You are not eligible for delivery";
+
+// console.log(canWeDeliverTwo(85205));
 
 
 //////////////////PROBLEM 3////////////////////
