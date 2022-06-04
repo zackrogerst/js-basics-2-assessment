@@ -112,7 +112,7 @@ let foodArr = [
         category: "Entree",
         popularity: 95,
         rating: 99,
-        tags: ["Gluten-Free", "Special"]
+        tags: ["Gluten-Free", "Special", "Gourmet"]
     },
     sandwich = {
         name: "Cuban",
@@ -148,6 +148,8 @@ let foodArr = [
     }
 ]
 
+// console.log(foodArr);
+
 //////////////////PROBLEM 4////////////////////
 /*
     Let's filter the food objects according
@@ -162,7 +164,9 @@ let foodArr = [
 
 //CODE HERE
 
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
+const filteredFood = foodArr.filter(element => element.tags.includes("Gourmet"));
+
+console.log(filteredFood);
 
 
 
