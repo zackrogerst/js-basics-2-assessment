@@ -24,6 +24,7 @@
 //CODE HERE
 
 const greetUser = username => `Welcome back, ${username}`;
+
 // console.log(greetUser("Andrew"));
 
 
@@ -53,7 +54,7 @@ const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 
 function canWeDeliver(zipCode) {
     for (let i = 0; i < deliveryAreaZipCodes.length; i++) {
-        if(deliveryAreaZipCodes[i] === zipCode) {
+        if (deliveryAreaZipCodes[i] === zipCode) {
             return "You are eligible for delivery";
         } else {
             return "You are not eligible for delivery";
@@ -103,11 +104,11 @@ const canWeDeliverTwo = (zipCode) => deliveryAreaZipCodes.includes(zipCode) === 
 
 const deals = [
     {
-        title: '15% Off!', 
+        title: '15% Off!',
         desc: 'Applied to your entire order when you spend $30 or more'
-    }, 
+    },
     {
-        title: 'Free Kids Meal with 2 Regular Entrees', 
+        title: 'Free Kids Meal with 2 Regular Entrees',
         desc: '   This deal lasts until the end of March! '
     }
 ]
@@ -123,11 +124,19 @@ const deals = [
 
 //CODE HERE
 
+// console.log(deals);
+
+
+const dealRateEditor = (arr, index, prevRate, newRate) => arr[index].title = arr[index].title.replace(prevRate, newRate);
+
+dealRateEditor(deals, 0, 15, 10);
+// console.log(deals);
+
 
 
 /*
     The restaurant is going to continue its
-    family deal for another month. 
+    family deal for another month.
 
     Reassign the value of the second deal's desc
     to be itself, but use the `replace` method
@@ -139,3 +148,8 @@ const deals = [
 */
 
 //CODE HERE
+
+const dealDateEditor = (arr, index, prevDate, newDate) => arr[index].desc = arr[index].desc.replace(prevDate, newDate).trim();
+
+dealDateEditor(deals, 1, "March", "April");
+// console.log(deals);
