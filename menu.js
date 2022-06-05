@@ -164,59 +164,52 @@ let foodArr = [
 
 //CODE HERE
 
-const filteredFood = foodArr.filter(element => element.tags.includes("Gourmet"));
+const filteredFood = foodArr.filter(obj => obj.tags.includes("Gourmet"));
 
-console.log(filteredFood);
-
+// console.log(filteredFood);
 
 
 //////////////////PROBLEM 5////////////////////
 /*
-    Now let's write a function that's a little
-    more flexible than just filtering for one
-    value. We want to be able to filter for
-    food that has above a certain rating,
-    below a certain price, or any other combo.
+    Now let's write a function that's a little more flexible than just filtering for one value. We want to be able to filter for food that has above a certain rating, below a certain price, or any other combo.
 
-    Write a function called `filterByProperty`
-    that takes in three arguments: `property`,
-    `number`, and `type.
+    Write a function called `filterByProperty` that takes in three arguments: `property`, `number`, and `type.
 
-    The property will be a string (rating,
-    popularity, or price)
+    The property will be a string (rating, popularity, or price)
+    The number will be the number that you want to compare against
+    The type should be 'above' or 'below' to indicate whether you want to get foods with values that are above or below the given number for the given property
 
-    The number will be the number that you want
-    to compare against
-
-    The type should be 'above' or 'below' to
-    indicate whether you want to get foods with
-    values that are above or below the given number
-    for the given property
-
-    Inside the function, create a variable to hold
-    a filtered array
-
+    Inside the function, create a variable to hold a filtered array
     Use the filter method to filter the foodArr
 
-        In the callback, check if the `type` is `above`,
-        if it is, return objects whose value for the given
-        property is greater than the `number` passed in
+        In the callback, check if the `type` is `above`, if it is, return objects whose value for the given property is greater than the `number` passed in
 
-        If the type isn't `below`, return objects whose
-        value for the given property is less than the
-        `number` passed in
+        If the type isn't `below`, return objects whose value for the given property is less than the `number` passed in
 
     Return the filtered array from the entire function
 */
 
 //CODE HERE
 
+function filterByProperty(property, number, type) {
+    if (type === "below") {
+        let result = foodArr.filter(obj => obj[property] < number);
+        return result
+    } else if (type === "above") {
+        let result = foodArr.filter(obj => obj[property] > number);
+        return result;
+    }
+}
+
+// const filterByProperty = (property, number, type) => { type === "below" ? result = foodArr.filter(obj => obj[property] < number) : result = foodArr.filter(obj => obj[property] > number); return result }
 
 /*
     Invoke the `filterByProperty` function passing
     in a value for each paramter.
-
+ 
     You'll have to console.log to see the filtered array
 */
 
 //CODE HERE
+
+console.log(filterByProperty("rating", 85, "above"));
