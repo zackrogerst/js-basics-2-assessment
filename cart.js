@@ -44,7 +44,7 @@ const cart = [
 
 const summedPrice = cart.reduce((accumulatedPrices, currentObject) => accumulatedPrices + currentObject.price, 0);
 
-console.log(summedPrice);
+// console.log(summedPrice);
 
 // const summedPrice = cart.reduce(/* CALLBACK HERE */)
 
@@ -66,6 +66,13 @@ console.log(summedPrice);
 
 //CODE HERE
 
+function calcFinalPrice (cartTotal, couponValue, tax) {
+    cartTotal = cartTotal - couponValue;
+    cartTotal = cartTotal * (1 + tax);
+    return cartTotal
+}
+
+// console.log(calcFinalPrice(8.99, 1, .06));
 
 
 //////////////////PROBLEM 3////////////////////
