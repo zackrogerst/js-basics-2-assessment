@@ -98,6 +98,13 @@ function calcFinalPrice (cartTotal, couponValue, tax) {
 /*
     TEXT ANSWER HERE
 
+    customer object should contain 
+    name(str),          for restaurant to call out            str for flexibiliy
+    order number(int),  for restaurant to track internally    int for math
+    food order(str),    for restaurant to make food           str for flexibiliy
+    drink order(str),   for restaurant to provide beverage    str for flexibiliy
+    dine in(boo)        for restaurant to track internally    boo for simplicity
+
 */
 
 /*
@@ -106,3 +113,13 @@ function calcFinalPrice (cartTotal, couponValue, tax) {
 */
 
 //CODE HERE
+
+customer1 = {
+    name: "Gary",
+    orderNumber: 45,
+    foodOrder: "Hamburger",
+    drinkOrder: "Water",
+    dineIn : false
+}
+
+// console.log(customer1);
