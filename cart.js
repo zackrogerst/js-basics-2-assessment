@@ -99,10 +99,10 @@ function calcFinalPrice (cartTotal, couponValue, tax) {
     TEXT ANSWER HERE
 
     customer object should contain 
-    name(str),          for restaurant to call out            str for flexibiliy
+    name(str),          for restaurant to call out            str for flexibility
     order number(int),  for restaurant to track internally    int for math
-    food order(str),    for restaurant to make food           str for flexibiliy
-    drink order(str),   for restaurant to provide beverage    str for flexibiliy
+    food order(str),    for restaurant to make food           str for flexibility
+    drink order(str),   for restaurant to provide beverage    str for flexibility
     dine in(boo)        for restaurant to track internally    boo for simplicity
 
 */
